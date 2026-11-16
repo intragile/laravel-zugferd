@@ -60,7 +60,7 @@ The library does not convert to PDF/A: give it a PDF/A-3 input. The profiles are
 
 ## What it pulls in
 
-`intragile/laravel-einvoicing` (the Laravel bridge, MIT), which brings the engine `intragile/php-einvoicing` (MIT) and the EN 16931 rules `intragile/einvoicing-rules-en16931` (EUPL-1.2), plus `intragile/einvoicing-rules-facturx` (the Factur-X schemas and rules, Apache-2.0).
+`intragile/laravel-einvoicing` (the Laravel bridge, MIT), which brings the engine `intragile/php-einvoicing` (MIT) and all three rule packages (`intragile/einvoicing-rules-en16931`, `-xrechnung` and `-facturx`), plus `intragile/einvoicing-rules-facturx` (the Factur-X schemas and rules, Apache-2.0).
 
 The metapackage itself is MIT-licensed and ships no code; each pulled package keeps its own licence.
 

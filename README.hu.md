@@ -60,7 +60,7 @@ A könyvtár nem konvertál PDF/A-ra: PDF/A-3 bemenetet kell adni. A profilok: M
 
 ## Amit behúz
 
-`intragile/laravel-einvoicing` (a Laravel-integráció, MIT), amely hozza a `intragile/php-einvoicing` motort (MIT) és az EN 16931 szabályokat, `intragile/einvoicing-rules-en16931` (EUPL-1.2), továbbá az `intragile/einvoicing-rules-facturx` csomagot (a Factur-X sémák és szabályok, Apache-2.0).
+`intragile/laravel-einvoicing` (a Laravel-integráció, MIT), amely hozza a `intragile/php-einvoicing` motort (MIT) és mindhárom szabálycsomagot (`intragile/einvoicing-rules-en16931`, `-xrechnung` és `-facturx`), továbbá az `intragile/einvoicing-rules-facturx` csomagot (a Factur-X sémák és szabályok, Apache-2.0).
 
 A metacsomag maga MIT licencű és nem szállít kódot; minden behúzott csomag a saját licencét tartja meg.
 
