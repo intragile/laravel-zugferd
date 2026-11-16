@@ -22,13 +22,13 @@ This is a thin metapackage: it has no code of its own and pulls in [`intragile/l
 
 ```bash
 composer require intragile/laravel-zugferd
-php artisan migrate
 ```
 
 Nothing needs configuring to write, read and validate: the Factur-X rules ship in the installed rule package. You supply the PDF/A-3 (rendering the PDF is not part of the library). The doctor also checks the default validator, which loads the Peppol rules, so install them once. Set a transport only if you also send over Peppol (see the full documentation).
 
 ```bash
 php artisan einvoicing:install-rules
+php artisan migrate   # create the two tables
 ```
 
 Check the installation:

@@ -22,13 +22,13 @@ Ez egy vékony metacsomag: nincs saját kódja, csak a [`intragile/laravel-einvo
 
 ```bash
 composer require intragile/laravel-zugferd
-php artisan migrate
 ```
 
 Az íráshoz, olvasáshoz és validáláshoz nincs mit beállítani: a Factur-X szabályok a telepített szabálycsomagban vannak. A PDF/A-3 dokumentumot te adod (a PDF megjelenítése nem része a könyvtárnak). A doctor az alapértelmezett validátort is ellenőrzi, amely betölti a Peppol szabályokat, ezért telepítsd őket egyszer. Transportot csak akkor állíts be, ha Peppolon is küldesz (lásd a teljes dokumentációt).
 
 ```bash
 php artisan einvoicing:install-rules
+php artisan migrate   # létrehozza a két táblát
 ```
 
 Ellenőrzés:
