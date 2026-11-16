@@ -1,0 +1,36 @@
+{
+    "name": "intragile/laravel-zugferd",
+    "description": "Laravel ZUGFeRD and Factur-X: write, read and validate hybrid PDF/A-3 e-invoices with embedded CII XML in pure PHP, on top of intragile/laravel-einvoicing.",
+    "keywords": [
+        "laravel",
+        "zugferd",
+        "factur-x",
+        "facturx",
+        "pdf-a-3",
+        "e-invoicing",
+        "en16931",
+        "germany",
+        "france"
+    ],
+    "type": "metapackage",
+    "license": "MIT",
+    "homepage": "https://intragile.eu",
+    "support": {
+        "issues": "https://github.com/intragile/laravel-zugferd/issues",
+        "source": "https://github.com/intragile/laravel-zugferd"
+    },
+    "authors": [
+        {
+            "name": "IntrAgile Kft.",
+            "email": "info@intragile.eu",
+            "homepage": "https://intragile.eu"
+        }
+    ],
+    "require": {
+        "intragile/einvoicing-rules-facturx": "^1.0",
+        "intragile/laravel-einvoicing": "^1.0",
+        "php": "^8.3"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

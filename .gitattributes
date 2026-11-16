@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+# Development files are left out of the Composer dist archive.
+/.github            export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/CHANGELOG.md       export-ignore

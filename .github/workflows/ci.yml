@@ -1,0 +1,45 @@
+name: install
+
+# Installs the published metapackage into a fresh Laravel application and runs the doctor.
+# Requires intragile/laravel-zugferd and its dependencies on Packagist, so it works after the release.
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "43 4 * * 3"
+  workflow_dispatch:
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.3', '8.4', '8.5']
+        laravel: ['12.*', '13.*']
+    name: PHP ${{ matrix.php }} / Laravel ${{ matrix.laravel }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, libxml, mbstring, zlib, sqlite3, pdo_sqlite
+          coverage: none
+      - run: composer validate --strict
+      - name: Create a fresh Laravel application
+        run: composer create-project "laravel/laravel:${{ matrix.laravel }}" app --no-interaction --no-progress --prefer-dist
+      - name: Require the metapackage
+        working-directory: app
+        run: composer require intragile/laravel-zugferd:^1.0 --no-interaction --no-progress
+      - name: Run the doctor
+        working-directory: app
+        # Placeholder credentials: the doctor only checks that they are present and long enough.
+        env:
+          RECOMMAND_API_KEY_ID: key_placeholder
+          RECOMMAND_API_SECRET: secret_placeholder
+          RECOMMAND_COMPANY_ID: c_placeholder
+        run: |
+          php artisan einvoicing:install-rules
+          php artisan migrate --force --no-interaction
+          php artisan einvoicing:doctor
