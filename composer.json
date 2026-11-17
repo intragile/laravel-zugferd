@@ -9,8 +9,7 @@
         "pdf-a-3",
         "e-invoicing",
         "en16931",
-        "germany",
-        "france"
+        "germany"
     ],
     "type": "metapackage",
     "license": "MIT",

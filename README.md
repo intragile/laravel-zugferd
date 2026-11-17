@@ -11,6 +11,8 @@ ZUGFeRD 2.x and Factur-X 1.0 for Laravel: embed the invoice XML into your PDF/A-
 
 This is a thin metapackage: it has no code of its own and pulls in [`intragile/laravel-einvoicing`](https://github.com/intragile/laravel-einvoicing) together with the rule package this use case needs, so that you can find it. The full functionality is documented there.
 
+If you are working on the French e-invoicing reform, use [`intragile/laravel-factur-x`](https://github.com/intragile/laravel-factur-x) instead.
+
 [Magyar nyelvű leírás → README.hu.md](README.hu.md)
 
 ## Requirements

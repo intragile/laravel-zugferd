@@ -11,6 +11,8 @@ ZUGFeRD 2.x és Factur-X 1.0 Laravelhez: a számla XML beágyazása a PDF/A-3 do
 
 Ez egy vékony metacsomag: nincs saját kódja, csak a [`intragile/laravel-einvoicing`](https://github.com/intragile/laravel-einvoicing) csomagot húzza be a használati esethez szükséges szabálycsomaggal együtt, hogy könnyen megtaláld. A teljes funkcionalitás ott van dokumentálva.
 
+Ha a francia e-számlázási reformmal dolgozol, helyette a [`intragile/laravel-factur-x`](https://github.com/intragile/laravel-factur-x) csomagot használd.
+
 [English documentation → README.md](README.md)
 
 ## Követelmények
