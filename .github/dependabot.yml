@@ -1,0 +1,10 @@
+version: 2
+updates:
+  # A metapackage has no development dependencies; only the workflow actions are kept current.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]
